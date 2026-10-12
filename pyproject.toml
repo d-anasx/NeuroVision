@@ -1,0 +1,24 @@
+[project]
+name = "neurovision"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "d-anasx", email = "djamaouianas@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "opencv-python-headless>=5.0.0.93",
+    "pathlib>=1.0.1",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.65.0",
+]
+
+[project.scripts]
+neurovision = "neurovision:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
