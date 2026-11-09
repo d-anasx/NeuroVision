@@ -1,0 +1,24 @@
+    cd /workspace/NeuroVision_AI
+
+    OPENBLAS_NUM_THREADS=1 \
+    OMP_NUM_THREADS=1 \
+    MKL_NUM_THREADS=1 \
+    NUMEXPR_NUM_THREADS=1 \
+    /venv/main/bin/python -m mlflow server \
+    --host 0.0.0.0 \
+    --port 5000 \
+    --allowed-hosts "beats-station-wise-publication.trycloudflare.com,127.0.0.1,localhost,0.0.0.0" \
+    --cors-allowed-origins "https://beats-station-wise-publication.trycloudflare.com" \
+    --backend-store-uri "sqlite:////workspace/NeuroVision_AI/neurovision_mlflow/mlflow.db" \
+    --artifacts-destination "/workspace/NeuroVision_AI/neurovision_mlflow/artifacts"
+
+
+
+
+
+
+cd /workspace/NeuroVision_AI
+
+/venv/main/bin/python -m streamlit run app.py \
+  --server.address 0.0.0.0 \
+  --server.port 8501

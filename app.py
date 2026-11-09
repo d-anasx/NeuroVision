@@ -14,7 +14,7 @@ from PIL import Image
 # -----------------------------
 
 MLFLOW_TRACKING_URI = (
-    "https://billion-rides-keno-viewers.trycloudflare.com"
+    "https://deck-waterproof-vocal-cycling.trycloudflare.com"
 )
 
 MODEL_URI = "models:/NeuroVision_MobileNetV2_FT@champion"
